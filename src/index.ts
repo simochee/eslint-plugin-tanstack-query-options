@@ -1,6 +1,6 @@
 import {Linter} from '@typescript-eslint/utils/ts-eslint'
 import { name, version } from '../package.json' with { type: 'json' };
-import {noLooseQueryKey} from "./rulres/no-loose-query-key";
+import {noLooseQueryKey} from "./rules/no-loose-query-key";
 
 const plugin = {
     meta: {
