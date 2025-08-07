@@ -1,0 +1,15 @@
+pre-commit:
+  commands:
+    biome:
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+      stage_fixed: true
+      run: |-
+        pnpm exec biome check \
+          --write \
+          --unsafe
+
+    sort-package-json:
+      glob: package.json
+      stage_fixed: true
+      run: |-
+        pnpm exec sort-package-json

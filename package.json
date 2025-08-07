@@ -1,0 +1,56 @@
+{
+  "name": "eslint-plugin-tanstack-query-options",
+  "version": "1.0.0",
+  "description": "An ESLint plugin for TanStack Query v5+ to enforce structured and reusable query definitions via queryOptions.",
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "type": "module",
+  "author": {
+    "name": "simochee",
+    "url": "https://simochee.net"
+  },
+  "peerDependencies": {
+    "eslint": "*"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "prepublishOnly": "pnpm run build",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "lefthook install"
+  },
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "tanstack-query"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simochee/eslint-plugin-tanstack-query-options.git"
+  },
+  "bugs": {
+    "url": "https://github.com/simochee/eslint-plugin-tanstack-query-options/issues"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.1.3",
+    "@tsconfig/node24": "^24.0.1",
+    "@types/node": "^24.2.0",
+    "eslint": "^9.32.0",
+    "lefthook": "^1.12.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2",
+    "unbuild": "^3.6.0"
+  }
+}
