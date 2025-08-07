@@ -49,7 +49,7 @@ function Todos() {
   "tanstack-query-options/no-loose-query-key": [
     "error",
     {
-      "allowQueryFilter": true
+      "allowQueryFilters": true
     }
   ]
 }
