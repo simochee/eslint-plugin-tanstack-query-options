@@ -25,7 +25,8 @@
     "prepublishOnly": "pnpm run build",
     "start": "tsx src/index.ts",
     "typecheck": "tsc --noEmit",
-    "postinstall": "lefthook install"
+    "postinstall": "lefthook install",
+    "test": "vitest"
   },
   "license": "MIT",
   "keywords": [
@@ -48,9 +49,11 @@
     "@tsconfig/node24": "^24.0.1",
     "@types/node": "^24.2.0",
     "eslint": "^9.32.0",
+    "eslint-vitest-rule-tester": "^2.2.1",
     "lefthook": "^1.12.2",
     "tsx": "^4.20.3",
     "typescript": "^5.9.2",
-    "unbuild": "^3.6.0"
+    "unbuild": "^3.6.0",
+    "vitest": "^3.2.4"
   }
 }
