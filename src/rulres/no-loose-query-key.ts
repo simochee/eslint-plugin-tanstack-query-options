@@ -29,8 +29,6 @@ export const noLooseQueryKey = createRule<Options, MessageId>({
                     return;
                 }
 
-                const calleeType = checker.getTypeAtLocation(calleeNode);
-
                 const parameters = signature.getParameters();
 
                 // queryKey を直接引数に取るメソッドのチェック
