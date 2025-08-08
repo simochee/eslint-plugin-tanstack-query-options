@@ -134,47 +134,6 @@ The rules with the following star ⭐ are included in the recommended configs.
 | [tanstack-query-options/no-inline-query-options](src/rules/no-inline-query-options.md) | enforces that `queryOptions` is not called directly inside query hooks    | ⭐ |
 | [tanstack-query-options/no-hardcoded-query-key](src/rules/no-hardcoded-query-key.md)   | discourages the use of hardcoded string or number literals in `queryKeys` |   |
 
-### `no-inline-query-options` ⭐
-
-**Enforces that `queryOptions` is not called directly inside query hooks.**
-
-This rule enforces the practice of defining `queryOptions` as standalone variables to improve code reusability.
-
-#### 👎 Incorrect code for this rule:
-
-```js
-/* eslint tanstack-query-options/no-loose-query-key: "error" */
-
-import { useQuery } from '@tanstack/react-query';
-import { queryOptions } from '@tanstack/react-query';
-
-function Todos() {
-    const query = useQuery(
-        queryOptions({
-            queryKey: ['todos'],
-            queryFn: fetchTodos,
-        }),
-    );
-}
-```
-
-#### 👍 Correct code for this rule:
-
-```js
-/* eslint tanstack-query-options/no-loose-query-key: "error" */
-
-import { useQuery } from '@tanstack/react-query';
-import { queryOptions } from '@tanstack/react-query';
-
-const todosOptions = queryOptions({
-    queryKey: ['todos'],
-    queryFn: fetchTodos,
-});
-
-function Todos() {
-    const query = useQuery(todosOptions);
-}
-```
 
 ### `no-hardcoded-query-key`
 
